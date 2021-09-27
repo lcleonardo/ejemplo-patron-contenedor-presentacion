@@ -8,6 +8,8 @@ export class UsuarioService {
   constructor() {}
 
   obtener(): Usuario[] {
+    let u = new Usuario('Leonardo', 'De la cruz', ['js', 'Java'])
+    this.usuarios = [...[], u]
     return this.usuarios
   }
 

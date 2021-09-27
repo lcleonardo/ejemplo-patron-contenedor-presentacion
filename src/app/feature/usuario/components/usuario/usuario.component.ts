@@ -14,8 +14,8 @@ export class UsuarioComponent implements OnInit {
   constructor(protected servicio: UsuarioService) {}
 
   ngOnInit(): void {
-    this.nuevo()
     this.obtener()
+    this.nuevo()
   }
 
   nuevo() {
