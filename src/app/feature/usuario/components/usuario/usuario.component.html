@@ -1,1 +1,14 @@
-<p>usuario works!</p>
+<button (click)="nuevo()">Nuevo</button>
+<br />
+<app-listar-usuario
+  *ngFor="let usuario of usuarios"
+  [usuario]="usuario"
+  [activo]="usuarioSeleccionado"
+  (seleccionado)="seleccionarUsuario(usuario)"
+></app-listar-usuario>
+<br />
+<app-guardar
+  *ngIf="usuarioSeleccionado"
+  [vm]="usuarioSeleccionado"
+  (guardar)="guardar($event)"
+></app-guardar>

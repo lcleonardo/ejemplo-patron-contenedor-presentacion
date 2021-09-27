@@ -1,7 +1,7 @@
-<article>
-  <p>{{ nombre }} {{ apellido }}</p>
+<article [class.highlighted]="activo">
+  <p>{{ usuario.nombreCompleto }}</p>
   <p>
-    <span *ngFor="let etiqueta of etiquetas">#{{ etiqueta }}</span>
+    <span *ngFor="let etiqueta of usuario.etiquetas">#{{ etiqueta }}</span>
   </p>
   <button>Editar</button>
   <button>Eliminar</button>

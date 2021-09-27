@@ -1,8 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
+import { Usuario } from './model/usuario'
 
-@Injectable(
-)
+@Injectable()
 export class UsuarioService {
+  constructor() {}
 
-  constructor() { }
+  obtener(): Usuario[] {
+    return []
+  }
+  guardar(usuario: Usuario) {}
+  editar(usuario: Usuario) {}
 }

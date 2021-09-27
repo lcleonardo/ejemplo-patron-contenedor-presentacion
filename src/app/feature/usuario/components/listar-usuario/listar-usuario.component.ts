@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+import { Usuario } from '../../shared/model/usuario'
 
 @Component({
   selector: 'app-listar-usuario',
@@ -6,11 +7,15 @@ import { Component, Input, OnInit } from '@angular/core'
   styleUrls: ['./listar-usuario.component.css'],
 })
 export class ListarUsuarioComponent implements OnInit {
-  @Input() nombre: string
-  @Input() apellido: string
-  @Input() etiquetas: string
+  @Input() usuario: Usuario
+  @Input() activo: boolean
+  @Output() seleccionado = new EventEmitter()
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  seleccionar() {
+    this.seleccionado.emit()
+  }
 }
