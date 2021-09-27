@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+import { Usuario } from '../../shared/model/usuario'
 
 @Component({
   selector: 'app-guardar',
@@ -6,12 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
   styleUrls: ['./guardar.component.css'],
 })
 export class GuardarComponent implements OnInit {
-  @Input() vm: {
-    nombre: string
-    apellido: string
-    etiquetas: string
-  }
-
+  @Input() usuario: Usuario
   @Output() guardar = new EventEmitter()
 
   constructor() {}
@@ -19,6 +15,6 @@ export class GuardarComponent implements OnInit {
   ngOnInit(): void {}
 
   guadar() {
-    this.guardar.emit(this.vm)
+    this.guardar.emit(this.usuario)
   }
 }

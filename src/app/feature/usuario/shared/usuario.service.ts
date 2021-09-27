@@ -3,11 +3,19 @@ import { Usuario } from './model/usuario'
 
 @Injectable()
 export class UsuarioService {
+  usuarios: Usuario[]
+
   constructor() {}
 
   obtener(): Usuario[] {
-    return []
+    return this.usuarios
   }
-  guardar(usuario: Usuario) {}
-  editar(usuario: Usuario) {}
+
+  guardar(usuario: Usuario): void {
+    this.usuarios.push(usuario)
+  }
+
+  editar(usuario: Usuario): void {
+    this.usuarios.push(usuario)
+  }
 }

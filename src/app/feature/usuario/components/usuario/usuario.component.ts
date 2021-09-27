@@ -10,6 +10,7 @@ import { UsuarioService } from '../../shared/usuario.service'
 export class UsuarioComponent implements OnInit {
   usuarios: Usuario[] = []
   usuarioSeleccionado: Usuario
+
   constructor(protected servicio: UsuarioService) {}
 
   ngOnInit(): void {
@@ -17,12 +18,16 @@ export class UsuarioComponent implements OnInit {
     this.obtener()
   }
 
-  seleccionarUsuario(usuario: Usuario) {
-    this.usuarioSeleccionado = usuario.clonar()
+  nuevo() {
+    this.usuarioSeleccionado = Usuario.nuevo()
   }
 
   obtener(): void {
     this.usuarios = this.servicio.obtener()
+  }
+
+  seleccionarUsuario(usuario: Usuario) {
+    this.usuarioSeleccionado = usuario.clonar()
   }
 
   guardar(usuario: Usuario) {
@@ -33,9 +38,5 @@ export class UsuarioComponent implements OnInit {
     }
     this.nuevo()
     this.obtener()
-  }
-
-  nuevo() {
-    this.usuarioSeleccionado = Usuario.nuevo()
   }
 }
