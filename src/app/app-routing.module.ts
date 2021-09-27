@@ -6,6 +6,11 @@ import { HomeComponent } from '@home/home.component'
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard] },
+  {
+    path: 'usuarios',
+    loadChildren: () =>
+      import('@usuario/usuario.module').then((m) => m.UsuarioModule),
+  },
 ]
 
 @NgModule({

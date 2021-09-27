@@ -30,12 +30,12 @@
       "@home/*": [
         "src/app/feature/home/*"
       ],
-      "@producto/*": [
-        "src/app/feature/producto/*"
-      ],
       "@shared/*": [
         "src/app/shared/*"
-      ]
+      ],
+      "@usuario/*": [
+        "src/app/feature/usuario/*"
+      ],
     }
   },
   "angularCompilerOptions": {
