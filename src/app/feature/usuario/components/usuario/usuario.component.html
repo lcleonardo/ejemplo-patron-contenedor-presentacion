@@ -1,5 +1,11 @@
 <button (click)="nuevo()">Nuevo</button>
 <br />
+<app-guardar
+  *ngIf="usuarioSeleccionado"
+  [usuario]="usuarioSeleccionado"
+  (guardar)="guardar($event)"
+></app-guardar>
+<router-outlet></router-outlet>
 <app-listar-usuario
   *ngFor="let usuario of usuarios"
   [usuario]="usuario"
@@ -7,9 +13,3 @@
   (seleccionado)="seleccionarUsuario(usuario)"
 ></app-listar-usuario>
 <br />
-<app-guardar
-  *ngIf="usuarioSeleccionado"
-  [usuario]="usuarioSeleccionado"
-  (guardar)="guardar($event)"
-></app-guardar>
-<router-outlet></router-outlet>

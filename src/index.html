@@ -1,14 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AppBase</title>
-  <base href="/">
+  <head>
+    <meta charset="utf-8" />
+    <title>AppBase</title>
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .btn {
+        margin-top: 16px;
+        margin-left: 8px;
+        margin-bottom: 8px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: black;
+      }
+
+      .btn:hover {
+        background-color: rgb(187, 236, 137);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

@@ -1,0 +1,33 @@
+article {
+  margin: 16px;
+  height: 100px;
+  background-color: blanchedalmond;
+  color: black;
+}
+
+article p {
+  margin: 8px;
+  font-size: 20px;
+}
+
+article p span {
+  font-size: 14px;
+  padding: 6px 16px;
+  margin-left: 8px;
+  background-color: rgb(134, 168, 229);
+  border-radius: 16px;
+}
+
+article button {
+  font-size: 14px;
+  padding: 4px;
+  margin-left: 8px;
+  background-color: rgb(19, 131, 134);
+  color: aliceblue;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+article button:hover {
+  background-color: rgb(35, 188, 190);
+}

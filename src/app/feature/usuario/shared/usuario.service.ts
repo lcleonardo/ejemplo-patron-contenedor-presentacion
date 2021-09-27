@@ -3,13 +3,11 @@ import { Usuario } from './model/usuario'
 
 @Injectable()
 export class UsuarioService {
-  usuarios: Usuario[]
+  usuarios: Usuario[] = []
 
   constructor() {}
 
   obtener(): Usuario[] {
-    let u = new Usuario('Leonardo', 'De la cruz', ['js', 'Java'])
-    this.usuarios = [...[], u]
     return this.usuarios
   }
 

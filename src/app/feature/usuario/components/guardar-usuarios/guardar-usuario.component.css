@@ -1,0 +1,17 @@
+article {
+  margin: 16px;
+  padding-top: 8px;
+  height: auto;
+  background-color: blanchedalmond;
+  color: black;
+}
+
+article input {
+  width: 400px;  
+  padding: 8px;
+  display: block;
+  margin-top: 16px;
+  margin-left: 8px;
+  border-radius: 8px;
+  border: 1 px solid black;
+}
