@@ -7,15 +7,15 @@ export class UsuarioService {
 
   constructor() {}
 
-  obtener(): Usuario[] {
+  public obtener(): Usuario[] {
     return this.usuarios
   }
 
-  guardar(usuario: Usuario): void {
+  public guardar(usuario: Usuario): void {
     this.usuarios.push(usuario)
   }
 
-  editar(usuario: Usuario): void {
+  public editar(usuario: Usuario): void {
     this.usuarios.push(usuario)
   }
 }
